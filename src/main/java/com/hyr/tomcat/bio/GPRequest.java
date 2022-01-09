@@ -15,6 +15,9 @@ public class GPRequest {
             if ((len = inputStream.read(buff)) > 0){
                 content = new String(buff,0,len);
             }
+            if (len < 1){
+                return;
+            }
             String line = content.split("\\n")[0];
             String[] arr = line.split("\\s");
             this.method = arr[0];
