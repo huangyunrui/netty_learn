@@ -3,7 +3,7 @@ package com.hyr.tomcat.bio;
 public abstract class GPServlet {
     public void service(GPRequest request, GPResponse response) throws Exception {
         if ("GET".equalsIgnoreCase(request.getMethod())){
-            doGet(request);
+            doGet(request,response);
         }else if ("POST".equalsIgnoreCase(request.getMethod())){
             doPost(request, response);
         }
@@ -12,5 +12,5 @@ public abstract class GPServlet {
     public abstract void doPost(GPRequest request, GPResponse response) throws Exception ;
 
 
-    public abstract void doGet(GPRequest request) throws Exception;
+    public abstract void doGet(GPRequest request, GPResponse response) throws Exception;
 }

@@ -7,7 +7,7 @@ public class SecondServlet extends GPServlet{
     }
 
     @Override
-    public void doGet(GPRequest request) throws Exception {
+    public void doGet(GPRequest request, GPResponse response) throws Exception {
 
     }
 }
